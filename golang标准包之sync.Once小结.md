@@ -1,11 +1,15 @@
 1. 首先列出讨论的一些结论
+   
 q: 如果在任意为止对某个变量进行了原子操作，那么其他所有的位置在使用该变量的时候都应该用原子操作
+
 a:  对
 
 q:并发操作全局的bool 到底要不要加锁 
+
 a:有并发的读写或者写 就要加锁, [uber的实现](https://github.com/uber-go/atomic/blob/master/atomic.go#L237)
 
 q: bool 类型占多少字节
+
 a: 1 byte
 
 2. 贴出源码
